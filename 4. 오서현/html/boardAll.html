@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시글 목록</title>
+
     <link rel="stylesheet" href="../css/boardAll.css">
 </head>
 <body>
@@ -18,8 +19,8 @@
 
         <!-- 전체, 팔로잉, 공지 -->
         <div class="top-2">
-            <button id="all">전체</button> <button id="Following">팔로잉</button><button id="notice">공지</button>
-            <div class="right"><button id="new">최신순</button><button id="top">인기순</button></div>
+            <button id="all" name = "all">전체</button> <button id="Following" name="Following">팔로잉</button><button id="notice" name="notice">공지</button>
+            <div class="right"><button id="new" name="new">최신순</button><button id="top" name="top">인기순</button></div>
         </div>
             
         <div class="post">
@@ -28,11 +29,11 @@
             </div>
             <div class="post-content">
               <h3>게시글 제목 1</h3>
-              <p>게시글 내용 1...</p>
+              <p id="board" name = "details">게시글 내용입니당</p>
               <div class="post-meta">
                 <span>조회수: 100</span>
                 <span>좋아요: 50</span>
-                <span>작성자: 사용자1</span>
+                <span>작성자: 유저일</span>
               </div>
             </div>
           </div>
@@ -43,11 +44,11 @@
             </div>
             <div class="post-content">
               <h3>게시글 제목 2</h3>
-              <p>게시글 내용 2...</p>
+              <p id="board" name = "details">게시글 내용입니당</p>
               <div class="post-meta">
                 <span>조회수: 200</span>
                 <span>좋아요: 70</span>
-                <span>작성자: 사용자2</span>
+                <span>작성자: 유저이</span>
               </div>
             </div>
           </div>
@@ -59,11 +60,11 @@
             </div>
             <div class="post-content">
               <h3>게시글 제목 3</h3>
-              <p>게시글 내용 2...</p>
+              <p  id="board" name = "details">게시글 내용입니당</p>
               <div class="post-meta">
                 <span>조회수: 200</span>
                 <span>좋아요: 70</span>
-                <span>작성자: 사용자2</span>
+                <span>작성자: 유저삼</span>
               </div>
             </div>
           </div>
@@ -74,15 +75,101 @@
             </div>
             <div class="post-content">
               <h3>게시글 제목 4</h3>
-              <p>게시글 내용 2...</p>
+              <p  id="board" name = "details">게시글 내용입니당</p>
               <div class="post-meta">
                 <span>조회수: 200</span>
                 <span>좋아요: 70</span>
-                <span>작성자: 사용자2</span>
+                <span>작성자: 유저사</span>
               </div>
             </div>
           </div>
+
+          <div class="post">
+            <div class="post-image">
+              <img src="../img/ko_592_1.jpg" alt="Image 2">
+            </div>
+            <div class="post-content">
+              <h3>게시글 제목 5</h3>
+              <p id="board" name = "details">게시글 내용입니당</p>
+              <div class="post-meta">
+                <span> 조회수: 200</span>
+                <span> 좋아요: 70</span>
+                <span> 작성자: 유저오</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="board"></div>
+        <div id="pagination"></div>
+
+        <script>
+          // 총 페이지 수와 현재 페이지를 설정합니다.
+var totalPages = 10;
+var currentPage = 1;
+
+// 게시판 데이터를 가져오는 함수를 가정합니다.
+function getBoardData(page) {
+  // 페이지에 해당하는 데이터를 가져오는 로직을 작성합니다.
+  // 예를 들어, AJAX 요청을 통해 서버에서 데이터를 가져올 수 있습니다.
+  // 가져온 데이터를 이용하여 게시판 목록을 렌더링하는 로직을 작성합니다.
+}
+
+// 페이지 번호를 클릭했을 때 호출되는 함수입니다.
+function goToPage(page) {
+  currentPage = page;
+  getBoardData(currentPage);
+  // 페이지를 변경한 후에도 페이지 번호를 갱신하는 로직을 작성할 수 있습니다.
+  renderPagination();
+}
+
+// 페이지 번호를 렌더링하는 함수입니다.
+function renderPagination() {
+  var paginationElement = document.getElementById("pagination");
+  paginationElement.innerHTML = "";
+
+  // 이전 페이지로 가는 링크를 생성합니다.
+  var previousLink = document.createElement("a");
+  previousLink.href = "#";
+  previousLink.innerHTML = "Previous";
+  previousLink.addEventListener("click", function () {
+    if (currentPage > 1) {
+      goToPage(currentPage - 1);
+    }
+  });
+  paginationElement.appendChild(previousLink);
+
+  // 페이지 번호 링크를 생성합니다.
+  for (var i = 1; i <= totalPages; i++) {
+    var pageLink = document.createElement("a");
+    pageLink.href = "#";
+    pageLink.innerHTML = i;
+    pageLink.addEventListener("click", (function (page) {
+      return function () {
+        goToPage(page);
+      };
+    })(i));
+    paginationElement.appendChild(pageLink);
+  }
+
+  // 다음 페이지로 가는 링크를 생성합니다.
+  var nextLink = document.createElement("a");
+  nextLink.href = "#";
+  nextLink.innerHTML = "Next";
+  nextLink.addEventListener("click", function () {
+    if (currentPage < totalPages) {
+      goToPage(currentPage + 1);
+    }
+  });
+  paginationElement.appendChild(nextLink);
+}
+
+// 초기 렌더링을 수행합니다.
+renderPagination();
+getBoardData(currentPage);
+
+        </script>
+
     
-  
+          <div class="footer"></div>
 </body>
 </html>

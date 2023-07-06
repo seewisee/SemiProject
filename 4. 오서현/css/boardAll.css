@@ -1,8 +1,19 @@
 
+@import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
+
+
+* {
+    font-family: "Segoe UI";
+    box-sizing: border-box;
+    color: rgb(60, 60, 60);
+  
+}
+
+
 .container{
     width: 100%;
-    height: 1200px;
-    border: 1px solid black;
+    height: 1800px;
+    flex-wrap: wrap;
     
 }
 
@@ -15,8 +26,7 @@
 /* 게시글 목록 적혀있는 칸 */
 .top {
     height: 100px;
-    width: 70%;
-    border: 1px solid black;
+    width: 65%;
     font-size: 35px;
     font-weight: bold;
     margin: auto;
@@ -25,11 +35,12 @@
 /* 전체 팔로잉 공지 버튼 있는 칸 */
 .top-2 {
     height: 80px;
-    width: 70%;
-    border: 1px solid black;
+    width: 65%;
     font-size: 20px;
     font-weight: bold;
     margin: auto;
+    border-bottom: 1px solid #ddd;
+
     
 
 }
@@ -46,7 +57,21 @@
     font-size: 18px;
     font-weight: bold;
     margin-top: 25px;
+    color:rgb(60, 60, 60);
+    background-color: white;
+    
 }
+
+#top:hover {
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 25px;
+  color:rgb(0, 220, 244);
+  background-color: white;
+}
+
 /* 최신순 버튼 */
 #new {
     border: none;
@@ -54,6 +79,18 @@
     font-size: 18px;
     font-weight: bold;
     margin-top: 25px;
+    color:rgb(60, 60, 60);
+    background-color: white;
+}
+
+#new:hover {
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 25px;
+  color:rgb(0, 220, 244);
+  background-color: white;
 }
 
 /* 공지 버튼 */
@@ -63,7 +100,20 @@
     font-size: 18px;
     font-weight: bold;
     margin-top: 25px;
+    color:rgb(60, 60, 60);
+    background-color: white;
 }
+
+#notice:hover {
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 25px;
+  color:rgb(0, 220, 244);
+  background-color: white;
+}
+
 /* 팔로잉 버튼 */
 #Following {
     border: none;
@@ -71,7 +121,20 @@
     font-size: 18px;
     font-weight: bold;
     margin-top: 25px;
+    color:rgb(60, 60, 60);
+    background-color: white;
 }
+
+#Following:hover {
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 25px;
+  color:rgb(0, 220, 244);
+  background-color: white;
+}
+
 /* 전체 버튼 */
 #all {
     border: none;
@@ -79,48 +142,59 @@
     font-size: 18px;
     font-weight: bold;
     margin-top: 25px;
+    color:rgb(60, 60, 60);
+    background-color: white;
 }
 
 
+#all:hover {
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 25px;
+  color:rgb(0, 220, 244);
+  background-color: white;
+}
+
+/* 게시글 목록 칸 */
 .post {
-    border: 1px solid black;
-    display: block;
-    width: 70%;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+  display: flex;
+  width:65%;
+  margin: auto;
+  margin-top: 10px;
     margin-bottom: 20px;
     border-radius: 20px;
+    height: 150px;
+    flex-wrap: wrap;
+
+  }
+
+  .post:hover {
+    border: 2px solid rgb(0, 220, 244);
+
 
   }
 
   .post-content {
-   display: block;
-    width: 70%;
+    height: 150px;
+    width: 80%;
     margin: auto;
-    position: relative;
-    bottom: 80px;
+    margin-left: 20px;
     
-
   }
   
   .post-image {
-    border: 1px solid black;
-    width: 120px;
-    height: 120px;
+    width: 145px;
+    height: 130px;
     position: relative;
-    top: 70px;
-    left: 30px;
+    border-radius: 20px;
   }
   
   .post-image img {
     width: 100%;
     height: auto;
-  }
-  
-  .post-details {
-    display: flex;
-    flex-direction: column;
+    border-radius: 20px;
   }
   
   .post-meta {
@@ -128,17 +202,24 @@
     float: right;
     align-items: center;
     font-size: 17px;
-    color: #888;
-    margin-top: 10px;
     position: relative;
-    top: 40px;
-    left: 80px;
+    bottom: 25px;
   }
   
-  .post-meta span {
-    margin-right: 10px;
+  .past-meta > span{
+    display: block;
+    float: right;
   }
 
+/* 게시글 제목 */
   h3 {
     font-size: 30px;
+    position: relative;
+    bottom: 15px;
+  }
+
+  /* 게시글 내용 */
+  #details {
+    position: relative;
+    bottom: 25px;
   }
