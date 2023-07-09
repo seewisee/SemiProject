@@ -167,6 +167,7 @@
     border-radius: 20px;
     height: 150px;
     flex-wrap: wrap;
+    border: 2px solid #ddd;
 
   }
 
@@ -197,6 +198,7 @@
     border-radius: 20px;
   }
   
+  /* 조회수, 좋아요 작성자 */
   .post-meta {
     display: flex;
     float: right;
@@ -222,4 +224,5 @@
   #details {
     position: relative;
     bottom: 25px;
+    font-size: 20px;
   }

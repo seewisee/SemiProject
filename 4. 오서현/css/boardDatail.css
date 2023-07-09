@@ -3,6 +3,183 @@
 * {
     font-family: "Segoe UI";
     color: rgb(60, 60, 60);
+    box-sizing: border-box;
 }
+
+.container {
+    width: 100%;
+    height: 1800px;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.header {
+    height: 150px;
+    border: 1px solid black;
+}
+
+.content {
+    width: 65%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+pre {
+    width: 65%;
+}
+
+/* 제목 */
+.title {
+    height: 50px;
+    width: 100%;
+    margin-top: 50px;
+    font-weight: bolder;
+    font-size: 35px;
+}
+/* 작성자 명 */
+.name {
+    height: 30px;
+    width: 100%;
+    padding-top: 5px;
+    font-weight: bold;
+  
+}
+/* 작성일 */
+.date {
+    height: 30px;
+    width: 100%;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+    
+}
+
+/* 조회수 */
+.views {
+    height: 30px;
+    width: 50%;
+    display: inline;
+    text-align: right;
+}
+
+/* 이미지 */
+.img{
+height: 450px;
+width: 100%;
+
+}
+
+.img img {
+    height: 45vh;
+    width: 50vh;
+    margin-top: 40px;
+}
+
+/* 내용 */
+.datail {
+    height: 30vh;
+    width: 100%;
+    word-break:break-all;
+}
+
+/* 좋아요 버튼 칸 */
+.like {
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 좋아요 버튼 */
+#likeBtn {
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border: none;
+}
+
+/* 좋아요 버튼 이미지 */
+#likeBtn img {
+    width: 30px;
+    height: 30px;
+    filter: invert(15%) sepia(93%) saturate(7473%) hue-rotate(0deg) brightness(109%) contrast(111%);
+}
+
+
+
+/* 공유버튼 칸 */
+.share {
+    width: 50%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row-reverse
+    
+}
+
+/* 공유 버튼 */
+#shareBtn {
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border: none;
+}
+
+/* 공유 버튼 이미지 */
+#shareBtn img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+/* 댓글 한 칸 */
+.comment {
+    border-bottom: 2px solid#ddd;
+    width: 100%;
+    height: 110px;
+    display: flex;
+}
+
+/* 댓글에 보일 프로필 사진 */
+.profilePicture {
+    width: 10vh;
+    height: 120px;
+   
+}
+
+.profilePicture img {
+    width: 90%;
+    position: relative;
+    top: 15px;
+
+}
+
+/* 유저명 */
+.userName {
+    width: 100%;
+    height: 120px;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* 유저가 단 댓글 내용 */
+.commentContent {
+    width: 100%;
+    height: 50%;
+    font-size: 15px;
+    padding-top: 10px;
+
+}
+
+
+
+
+
+
+
+
 
 
