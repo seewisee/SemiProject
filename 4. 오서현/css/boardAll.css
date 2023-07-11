@@ -154,6 +154,10 @@
   background-color: white;
 }
 
+.content{
+height: 1000px;
+}
+
 /* 게시글 목록 칸 */
 .post {
   display: flex;
@@ -182,17 +186,17 @@
     
   }
   
+  /* 게시글 이미지 있는 칸 */
   .post-image {
-    width: 145px;
-    height: 130px;
-    position: relative;
-    border-radius: 20px;
+    width: 15%;
+    height: 15%;
   }
   
+  /* 게시글 이미지 */
   .post-image img {
     width: 100%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 18px;
   }
   
   /* 조회수, 좋아요 작성자 */
