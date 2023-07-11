@@ -6,11 +6,14 @@
     <title>게시글 목록</title>
 
     <link rel="stylesheet" href="../css/boardAll.css">
-</head>
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
 <body>
 
+  <nav id="mc-nav"></nav>
     <div class="container">
-        <div class="header"></div>
 
         <!-- 게시글 목록 텍스트 -->
         <div class="top">
@@ -99,77 +102,27 @@
             </div>
           </div>
 
-          <div id="board"></div>
-        <div id="pagination"></div>
 
-        <script>
-          // 총 페이지 수와 현재 페이지를 설정합니다.
-var totalPages = 10;
-var currentPage = 1;
 
-// 게시판 데이터를 가져오는 함수를 가정합니다.
-function getBoardData(page) {
-  // 페이지에 해당하는 데이터를 가져오는 로직을 작성합니다.
-  // 예를 들어, AJAX 요청을 통해 서버에서 데이터를 가져올 수 있습니다.
-  // 가져온 데이터를 이용하여 게시판 목록을 렌더링하는 로직을 작성합니다.
-}
-
-// 페이지 번호를 클릭했을 때 호출되는 함수입니다.
-function goToPage(page) {
-  currentPage = page;
-  getBoardData(currentPage);
-  // 페이지를 변경한 후에도 페이지 번호를 갱신하는 로직을 작성할 수 있습니다.
-  renderPagination();
-}
-
-// 페이지 번호를 렌더링하는 함수입니다.
-function renderPagination() {
-  var paginationElement = document.getElementById("pagination");
-  paginationElement.innerHTML = "";
-
-  // 이전 페이지로 가는 링크를 생성합니다.
-  var previousLink = document.createElement("a");
-  previousLink.href = "#";
-  previousLink.innerHTML = "Previous";
-  previousLink.addEventListener("click", function () {
-    if (currentPage > 1) {
-      goToPage(currentPage - 1);
-    }
-  });
-  paginationElement.appendChild(previousLink);
-
-  // 페이지 번호 링크를 생성합니다.
-  for (var i = 1; i <= totalPages; i++) {
-    var pageLink = document.createElement("a");
-    pageLink.href = "#";
-    pageLink.innerHTML = i;
-    pageLink.addEventListener("click", (function (page) {
-      return function () {
-        goToPage(page);
-      };
-    })(i));
-    paginationElement.appendChild(pageLink);
-  }
-
-  // 다음 페이지로 가는 링크를 생성합니다.
-  var nextLink = document.createElement("a");
-  nextLink.href = "#";
-  nextLink.innerHTML = "Next";
-  nextLink.addEventListener("click", function () {
-    if (currentPage < totalPages) {
-      goToPage(currentPage + 1);
-    }
-  });
-  paginationElement.appendChild(nextLink);
-}
-
-// 초기 렌더링을 수행합니다.
-renderPagination();
-getBoardData(currentPage);
-
-        </script>
 
     
-          <div class="footer"></div>
+
+          <div id="mc-footer"></div>
+          <script>
+            $.ajax({
+    url: 'https://gist.githubusercontent.com/abs013r/cb774124e29ab7e396b638939ec0bda1/raw/479c0716a7104236e2e4fdc089586b3aeef5831b/MCnav.html',
+    type: 'GET',
+    success: function(data) { $('#mc-nav').html(data); },
+    error: function() { console.log('이거 뜨면 실패입니다… 조훈한테 문의하세요'); }
+});
+
+$.ajax({
+    url: 'https://gist.githubusercontent.com/abs013r/0d6ff4139684cf842192a2d312266a83/raw/6e629f95c437670fc573560fd8559829a25b30c8/MCfooter.html',
+    type: 'GET',
+    success: function(data) { $('#mc-footer').html(data); },
+    error: function() { console.log('이거 뜨면 실패입니다… 조훈한테 문의하세요'); }
+});
+
+          </script>
 </body>
 </html>
