@@ -193,7 +193,7 @@ main > section:nth-child(2){
   width: 500px;
   height: 400px;
   display: none;
-  position: absolute;;
+  position: absolute;
   background-color: beige;
   border-radius: 10px;
 }
@@ -319,7 +319,7 @@ main > section:nth-child(6){
 #delete button:hover {
   background-color: white;
   border: 2px solid rgb(0, 220, 244);
-  color: rgb(0, 220, 244);;
+  color: rgb(0, 220, 244);
 }
 
 

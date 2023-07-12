@@ -30,14 +30,13 @@
     height: 100px;
     width: 70%;
     margin: auto;
-    background-color: #ddd;
     font-size: 20px;
     border-radius: 7px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 220, 244);
+    border: 2px solid rgb(0, 220, 244);
     font-weight: bold;
 
 
@@ -48,13 +47,8 @@
     text-align: center;
     position: relative;
     width: 90%;
-    color: white;
 }
 
-/* 커뮤니티 정책 */
-#pre a {
-    color: white;
-}
 
 /* 이미지 선택 버튼 없애기 */
 #image {
@@ -153,7 +147,7 @@
     height: 150px;
     border-top: 3px solid #ddd;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 /* 작성완료 버튼 */
@@ -167,14 +161,14 @@
     background-color: rgb(0, 220, 244);
     color: white;
     border: none;
-    border-radius: 20%;
+    border-radius: 20px;
     cursor: pointer;
 }
 
 #btn:hover {
     color: rgb(0, 220, 244);
     background-color: white;
-    border: 3px solid rgb(0, 220, 244);
+    border: 2px solid rgb(0, 220, 244);
 }
 
 #counter {
