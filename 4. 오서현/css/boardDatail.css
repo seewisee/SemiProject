@@ -13,16 +13,13 @@
 }
 
 
-
 .content {
-    width: 65%;
+    width: 1000px;
     margin: auto;
     flex-wrap: wrap;
 }
 
-pre {
-    width: 65%;
-}
+
 
 /* 제목 */
 .title {
@@ -76,8 +73,12 @@ width: 100%;
 .datail {
     height: 30vh;
     width: 100%;
-    word-break:break-all;
+
+    display: flex;
+    overflow: hiddlen;
 }
+
+
 
 /* 좋아요 버튼 칸 */
 .like {

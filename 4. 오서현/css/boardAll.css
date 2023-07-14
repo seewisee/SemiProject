@@ -12,8 +12,8 @@
 
 
 main{
-  width: 65%;
-  /* width: 1300px; */
+  width: 1000px;
+ /*width: 1300px; */
   margin: auto;
   display: flex;
   flex-direction: column;
