@@ -12,11 +12,11 @@
 
 
 main{
-  width: 1000px;
- /*width: 1300px; */
-  margin: auto;
   display: flex;
-  flex-direction: column;
+	width: 1280px;
+	margin: auto;
+	flex-direction: column;
+    align-items: center;
 }
 
 
@@ -157,6 +157,10 @@ background-color: white;
 height: 1000px;
 }
 
+.img img {
+  width: 200px; 
+  height: 200px;
+}
 
 main > section:nth-child(2){
   display: flex;

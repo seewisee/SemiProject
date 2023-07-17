@@ -14,8 +14,13 @@
 
 /* 바디 */
 .content {
-    height: 1000px;
-   
+ 
+	display: flex;
+	width: 1280px;
+	margin: auto;
+	flex-direction: column;
+    align-items: center;
+
 }
 
 .top {
