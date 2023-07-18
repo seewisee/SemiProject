@@ -144,18 +144,21 @@ background-color: white;
 }
 
 #all:hover {
-border: none;
-cursor: pointer;
-font-size: 18px;
-font-weight: bold;
-margin-top: 25px;
-color:rgb(0, 220, 244);
-background-color: white;
-}
+  cursor: pointer;
+  font-weight: bold;
+  color:rgb(0, 220, 244);
+  background-color: white;
+  }
+  
 
 .content{
 height: 1000px;
 }
+
+.fir a {
+  text-decoration: none;
+}
+
 
 .img img {
   width: 200px; 

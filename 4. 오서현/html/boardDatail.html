@@ -50,13 +50,11 @@
 
             <form>
                 <!-- 좋아요, 공유 -->
-                <div class="like">
-                    <button type="button" id="likeBtn"><img src="../img/heart.svg" id="likeBtnImg"
-                            onclick="likeBtnClick()"> 좋아요</button>
                     <div class="share">
-                        <button type="button" id="shareBtn"><img src="../img/share.svg"></button>
+                        <button type="button" id="bookBtn"><img id="bookBtnImg" src="../img/bookmark.svg" onclick="bookBtnClick()"></button>
+                        <button type="button" id="likeBtn"><img src="../img/heart.svg" id="likeBtnImg"
+                                onclick="likeBtnClick()"></button>
                     </div>
-                </div>
 
                 <div class="commentWrite">
                     <input type="text" name="commentWrite" id="commentWrite" placeholder="댓글을 입력해주세요.">

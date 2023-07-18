@@ -16,6 +16,24 @@ function likeBtnClick() {
     cnt++;
 }
 
+function bookBtnClick() {
+
+    const img = document.getElementById("bookBtnImg");
+    img.src = "../img/bookmark-fill.svg";
+
+    if(cnt%2==1) {
+        img.src = "../img/bookmark-fill.svg";
+    }else {
+        img.src = "../img/bookmark.svg";
+    }
+    cnt++;
+}
+
+
+
+
+
+
 $.ajax({
 url: 'https://gist.githubusercontent.com/abs013r/cb774124e29ab7e396b638939ec0bda1/raw/479c0716a7104236e2e4fdc089586b3aeef5831b/MCnav.html',
 type: 'GET',
