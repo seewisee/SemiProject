@@ -49,13 +49,18 @@
             </div>
 
             <form>
-                <!-- 좋아요, 공유 -->
+                <!-- 좋아요, 북마크 -->
+                <div class="likeAndBookmark">
                     <div class="share">
                         <button type="button" id="bookBtn"><img id="bookBtnImg" src="../img/bookmark.svg" onclick="bookBtnClick()"></button>
                         <button type="button" id="likeBtn"><img src="../img/heart.svg" id="likeBtnImg"
                                 onclick="likeBtnClick()"></button>
-                    </div>
-
+                            </div>
+                            <div class="alterBtn">
+                                <button type="button" id="updateBtn">수정</button> 
+                                <button type="button" id="deleteBtn">삭제</button> 
+                            </div>
+                </div>  
                 <div class="commentWrite">
                     <input type="text" name="commentWrite" id="commentWrite" placeholder="댓글을 입력해주세요.">
                     <button type="submit" name="commentbtn" id="commentbtn">댓글 저장</button>
